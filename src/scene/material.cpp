@@ -45,30 +45,34 @@ glm::dvec3 Material::shade(Scene *scene, const ray& r, const isect& i) const
 	// 		.
 	// 		.
 	// }
-    const Material& m = i.getMaterial();
 
-    glm::dvec3 diffuse = glm::dvec3(0,0,0);
-    glm::dvec3 specular = glm::dvec3(0,0,0);
+    glm::dvec3 diffuse = glm::dvec3(0.0,0.0,0.0);
+    glm::dvec3 specular = glm::dvec3(0.0,0.0,0.0);
 
-    glm::dvec3 L = glm::dvec3(0,0,0); 
-    glm::dvec3 I_l = glm::dvec3(0,0,0);
+    glm::dvec3 I_l = glm::dvec3(0.0,0.0,0.0);
+    glm::dvec3 atten = glm::dvec3(0.0,0.0,0.0);
 
-    glm::dvec3 V = scene->getCamera().getLook();// -1.0 * r.d; // TODO: check this calculation , multiply by -1?
-    glm::dvec3 R = glm::dvec3(0,0,0);
+    glm::dvec3 L = glm::dvec3(0.0,0.0,0.0); 
 
+    glm::dvec3 V = r.d; // scene->getCamera().getLook();// -1.0 * r.d; // TODO: check this calculation , multiply by -1?
+    glm::dvec3 R = glm::dvec3(0.0,0.0,0.0);
+
+    glm::dvec3 intersection_point = r.p+i.t*r.d;
     vector<Light*>::const_iterator it;
     for (it = scene->beginLights(); it != scene->endLights(); it++) {
         I_l = (*it)->getColor();
-        L = (*it)->getDirection(i.bary); // TODO investigate getDirection arg
-        diffuse += m.kd(i) * I_l * max(0.0, glm::dot(i.N, L));
+        ray shadow(intersection_point, (*it)->getDirection(intersection_point), r.getPixel() , r.ctr, r.getAtten(),ray::SHADOW);
+        atten = (*it)->distanceAttenuation(intersection_point) * (*it)->shadowAttenuation(shadow, intersection_point);
 
-        R = glm::normalize(L - (2.0 * i.N * glm::dot(i.N, L)));// - L; 
-        specular += m.ks(i) * I_l * pow(max(0.0, glm::dot(R, V)), m.shininess(i));
+        L = (*it)->getDirection(r.p+i.t*r.d); // TODO investigate getDirection arg
+        diffuse += atten * kd(i) * I_l * max(0.0, glm::dot(i.N, L));
+
+        R = (2.0 * glm::dot(i.N, L) * i.N) - L;// normalize?
+        specular += atten * ks(i) * I_l * pow(max(0.0, glm::dot(V, R)), shininess(i));
     }
 
-    glm::dvec3 colorC = m.ke(i) + m.ka(i)*scene->ambient() + diffuse + specular;
+    glm::dvec3 colorC = ke(i) + ka(i)*scene->ambient() + diffuse + specular;
     return colorC;
-   //     return kd(i);
 }
 
 TextureMap::TextureMap( string filename ) {

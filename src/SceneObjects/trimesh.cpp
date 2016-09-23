@@ -95,11 +95,11 @@ bool TrimeshFace::intersectLocal(ray& r, isect& i) const
     glm::dvec3 c_coords = parent->vertices[ids[2]];
 
     glm::dvec3 d_normalized = glm::normalize(r.d);
-//    glm::dvec3 n = glm::normalize(glm::cross(a_coords - c_coords, b_coords - c_coords));
 
     if (glm::dot(normal, d_normalized) == 0 ) return false;
-    double d = glm::dot(normal, parent->vertices[0]);
+    double d = glm::dot(normal, a_coords);
     double t = (d - glm::dot(normal, r.p)) / (glm::dot(normal, d_normalized));
+    if (t < 0.00001) return false;
     glm::dvec3 q = r.p + t * d_normalized; 
     
 

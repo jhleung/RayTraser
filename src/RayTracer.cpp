@@ -25,7 +25,7 @@ extern TraceUI* traceUI;
 // Use this variable to decide if you want to print out
 // debugging messages.  Gets set in the "trace single ray" mode
 // in TraceGLWindow, for example.
-bool debugMode = false;
+bool debugMode = true;
 
 // Trace a top-level ray through pixel(i,j), i.e. normalized window coordinates (x,y),
 // through the projection plane, and out into the scene.  All we do is
@@ -68,77 +68,43 @@ glm::dvec3 RayTracer::tracePixel(int i, int j, unsigned int ctr)
 // (or places called from here) to handle reflection, refraction, etc etc.
 glm::dvec3 RayTracer::traceRay(ray& r, const glm::dvec3& thresh, int depth, double& t )
 {
-	isect i;
-	glm::dvec3 colorC;
-        
-    if (depth == 0)
-        return colorC;
+    // YOUR CODE HERE
+    // getting color of intersection point
 
-	if(scene->intersect(r, i)) {
-		// YOUR CODE HERE
-                // getting color of intersection point
+    // An intersection occurred!  We've got work to do.  For now,
+    // this code gets the material for the surface that was intersected,
+    // and asks that material to provide a color for the ray.  
 
-		// An intersection occurred!  We've got work to do.  For now,
-		// this code gets the material for the surface that was intersected,
-		// and asks that material to provide a color for the ray.  
+    // This is a great place to insert code for recursive ray tracing.
+    // Instead of just returning the result of shade(), add some
+    // more steps: add in the contributions from reflected and refracted
+    // rays.
+    isect i;
+    glm::dvec3 colorC;
+    glm::dvec3 reflect;   
+    glm::dvec3
+     d = glm::normalize(r.d);
+    if(scene->intersect(r, i)) {
+        const Material& m = i.getMaterial();
+            //refration: keep track of incoming/outgoing
+        colorC = m.shade(scene, r, i); // Phong
+        if (depth > 0) {
+            if (m.Refl()) {
+               glm::dvec3 R = r.d - 2.0 * glm::dot(r.d, i.N) * i.N;
+               ray refl(r.p+i.t*r.d, R, r.pixel, r.ctr, r.atten, ray::REFLECTION);
+               reflect += traceRay(refl, thresh, depth - 1, t) * m.kr(i);
+            }
+        }
+    } else {
+        // No intersection.  This ray travels to infinity, so we color
+        // it according to the background color, which in this (simple) case
+        // is just black.
+        // 
+        // FIXME: Add CubeMap support here.
 
-		// This is a great place to insert code for recursive ray tracing.
-		// Instead of just returning the result of shade(), add some
-		// more steps: add in the contributions from reflected and refracted
-		// rays.
-                
-               
-                
-               // I = k_e + k_a*I_a + k_d*I_l(N dot L) + k_s*I_l(R dot V)^n_s
-               // k_e = emissivity/intrinsic shade of object
-               // k_a = ambient reflection coefficient, I_a = ambient intensity
-               /* k_d = diffuse reflection coefficient, I_l = light src intensity
-                  N = normal to surface (unit), L = direction to light source (unit vec                       tor)
-                */
-               /* k_s = specular refl coeff, n_s = specular exponent/shininess
-                R = reflection of light about normal
-                V = viewing direction (unnit Vector)
-                */
-               
-                       
-                const Material& m = i.getMaterial();
-	//	if (m.Refl()) {
-        //            ray refl(r.p, r.d, r.pixel, r.ctr, r.atten, ray::REFLECTION);
-        //            traceRay(refl, thresh, depth, t);
-        //        }
-        
-        
-                // PHONG ILLUMINATION MODEL:
-
-             //   glm::dvec3 diffuse = glm::dvec3(0,0,0);
-             //   glm::dvec3 specular = glm::dvec3(0,0,0);
-             //   glm::dvec3 L = glm::dvec3(0,0,0); 
-             //   glm::dvec3 I_l = glm::dvec3(0,0,0);
-             //   vector<Light*>::const_iterator it;
-
-             //   glm::dvec3 V =-1.0 * scene->getCamera().getLook();// -1.0 * r.d; // TODO: check this calculation
-             //   glm::dvec3 R = glm::dvec3(0,0,0);
-
-             // for (it = scene->beginLights(); it != scene->endLights(); it++) {
-             //     I_l = (*it)->getColor();
-             //     L = (*it)->getDirection(r.d); // TODO investigate getDirection arg
-             //     diffuse += m.kd(i) * I_l * max(0.0, glm::dot(i.N, L));
-                 
-             //     R = (2.0 * i.N * glm::dot(i.N, L)) - L;
-             //     specular += m.ks(i) * I_l * pow(max(0.0, glm::dot(R, V)), m.shininess(i)); 
-             // }
-             // colorC = m.ke(i) + m.ka(i)*scene->ambient() + diffuse + specular;
-            colorC = m.shade(scene, r, i);
-	} else {
-		// No intersection.  This ray travels to infinity, so we color
-		// it according to the background color, which in this (simple) case
-		// is just black.
-		// 
-		// FIXME: Add CubeMap support here.
-
-		colorC = glm::dvec3(0.0, 0.0, 0.0);
-	}
-	return colorC;
+        colorC = glm::dvec3(0.0, 0.0, 0.0);
+    }
+    return colorC + reflect;
 }
 
 RayTracer::RayTracer()
