@@ -63,6 +63,22 @@ glm::dvec3 RayTracer::tracePixel(int i, int j, unsigned int ctr)
 	return col;
 }
 
+glm::dvec3 RayTracer::aaTracePixel(int i, int j, int samples, unsigned int ctr)
+{
+	glm::dvec3 col(0,0,0);
+
+	if( ! sceneLoaded() ) return col;
+
+	double x = double(i)/double(buffer_width * samples);
+	double y = double(j)/double(buffer_height * samples);
+	unsigned char *pixel = buffer + ( i + j * buffer_width) * 3;
+	col = trace(x, y, pixel, ctr);
+
+	// pixel[0] = (int)( 255.0 * col[0]);
+	// pixel[1] = (int)( 255.0 * col[1]);
+	// pixel[2] = (int)( 255.0 * col[2]);
+	return col;
+}
 
 // Do recursive ray tracing!  You'll want to insert a lot of code here
 // (or places called from here) to handle reflection, refraction, etc etc.
@@ -126,8 +142,12 @@ glm::dvec3 RayTracer::traceRay(ray& r, const glm::dvec3& thresh, int depth, doub
         // is just black.
         // 
         // FIXME: Add CubeMap support here.
-
-        colorC = glm::dvec3(0.0, 0.0, 0.0);
+        if (getCubeMap()) {
+        	cout << "cubemap exists in raytracer" << endl;
+    		colorC = cubemap->getColor(r);
+    	}
+    	else
+        	colorC = glm::dvec3(0.0, 0.0, 0.0);
     }
     return colorC + reflect + refract;
 }
@@ -229,6 +249,19 @@ int RayTracer::aaImage(int samples, double aaThresh)
 {
 	// YOUR CODE HERE
 	// FIXME: Implement Anti-aliasing here
+	traceSetup(buffer_width, buffer_height);
+  
+	for (int i = 0; i < buffer_width; i++) {
+	    for (int j = 0; j < buffer_height; j++) {
+	    	glm::dvec3 total;
+	    	for (int s = 0; s < samples; s++)
+				for (int t = 0; t < samples; t++) {
+					total += aaTracePixel(i*samples + s, j*samples + t, samples, 0);
+				}
+			total /= (samples * samples);
+			setPixel(i, j, total);
+		} 	
+	}
 }
 
 bool RayTracer::checkRender()

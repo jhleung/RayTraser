@@ -129,7 +129,7 @@ bool TrimeshFace::intersectLocal(ray& r, isect& i) const
         i.setUVCoordinates(glm::dvec2(alpha, beta));
         i.setBary(q);
         i.setT(t);
-        // i.setN(normal);
+        //i.setN(normal);
         i.setN(interpolated_normal);
         i.setObject(this);
         i.setMaterial(this->getMaterial());

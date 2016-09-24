@@ -121,8 +121,20 @@ glm::dvec3 TextureMap::getMappedValue( const glm::dvec2& coord ) const
 	// [0, 1] x [0, 1] in 2-space to bitmap coordinates,
 	// and use these to perform bilinear interpolation
 	// of the values.
+	//printf("getMappedValue");
+	double a = coord[0] * width;
+	double b = coord[1] * height;
 
-	return glm::dvec3(1,1,1);
+	int i = (int) floor(a);
+	int j = (int) floor(b);
+
+	double x_delta = a - i;
+	double y_delta = b - j;
+	
+	return (1-x_delta)*(1-y_delta)*getPixelAt(i,j);
+			+ x_delta*(1-y_delta)*getPixelAt(i+1,j)
+			+ (1-x_delta)*y_delta*getPixelAt(i,j+1)
+			+ x_delta*y_delta*getPixelAt(i+1,j+1);
 }
 
 
