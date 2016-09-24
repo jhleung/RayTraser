@@ -81,18 +81,44 @@ glm::dvec3 RayTracer::traceRay(ray& r, const glm::dvec3& thresh, int depth, doub
     // rays.
     isect i;
     glm::dvec3 colorC;
-    glm::dvec3 reflect;   
-    glm::dvec3
-     d = glm::normalize(r.d);
+    glm::dvec3 reflect; 
+    glm::dvec3 refract;  
+    glm::dvec3 d = glm::normalize(r.d);
     if(scene->intersect(r, i)) {
         const Material& m = i.getMaterial();
+        glm::dvec3 intersection_point = r.p + i.t * r.d;
             //refration: keep track of incoming/outgoing
         colorC = m.shade(scene, r, i); // Phong
         if (depth > 0) {
             if (m.Refl()) {
-               glm::dvec3 R = r.d - 2.0 * glm::dot(r.d, i.N) * i.N;
-               ray refl(r.p+i.t*r.d, R, r.pixel, r.ctr, r.atten, ray::REFLECTION);
-               reflect += traceRay(refl, thresh, depth - 1, t) * m.kr(i);
+            	glm::dvec3 R = r.d - 2.0 * glm::dot(r.d, i.N) * i.N;
+            	ray refl(intersection_point, R, r.pixel, r.ctr, r.atten, ray::REFLECTION);
+            	reflect += traceRay(refl, thresh, depth - 1, t) * m.kr(i);
+            }
+
+            if (m.Trans()) {
+            	double index_refr;
+            	glm::dvec3 normal;
+            	//If two vectors point along the same 'general direction', their dot product is positive
+            	if (glm::dot(d, i.N) > 0) {
+            		normal = -1.0 * i.N;
+            		index_refr = m.index(i) / 1.0029;
+            	} 
+            	else {
+            		normal = i.N;
+            		index_refr = 1.0029 / m.index(i);
+            	}
+
+            	// check for TIR
+        		if ((1.0 - pow(index_refr,2) * (1.0 - pow(glm::dot(i.N, -1.0 * r.d), 2))) < 0) {
+        			refract += colorC;
+        		} 
+        		else {
+        			// cout << "pls" << endl;
+            		glm::dvec3 R = glm::refract(r.d, normal, index_refr);
+	              	ray refr(intersection_point, R, r.pixel, r.ctr, r.atten, ray::REFRACTION);
+            		refract += traceRay(refr, thresh, depth - 1, t) * m.kt(i);
+        		}
             }
         }
     } else {
@@ -104,7 +130,7 @@ glm::dvec3 RayTracer::traceRay(ray& r, const glm::dvec3& thresh, int depth, doub
 
         colorC = glm::dvec3(0.0, 0.0, 0.0);
     }
-    return colorC + reflect;
+    return colorC + reflect + refract;
 }
 
 RayTracer::RayTracer()
