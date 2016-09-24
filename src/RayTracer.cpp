@@ -114,7 +114,6 @@ glm::dvec3 RayTracer::traceRay(ray& r, const glm::dvec3& thresh, int depth, doub
         			refract += colorC;
         		} 
         		else {
-        			// cout << "pls" << endl;
             		glm::dvec3 R = glm::refract(r.d, normal, index_refr);
 	              	ray refr(intersection_point, R, r.pixel, r.ctr, r.atten, ray::REFRACTION);
             		refract += traceRay(refr, thresh, depth - 1, t) * m.kt(i);

@@ -54,21 +54,21 @@ glm::dvec3 Material::shade(Scene *scene, const ray& r, const isect& i) const
 
     glm::dvec3 L = glm::dvec3(0.0,0.0,0.0); 
 
-    glm::dvec3 V = r.d; // scene->getCamera().getLook();// -1.0 * r.d; // TODO: check this calculation , multiply by -1?
+    glm::dvec3 V =  -1.0 * r.d;//scene->getCamera().getLook();// -1.0 * r.d; // TODO: check this calculation , multiply by -1?
     glm::dvec3 R = glm::dvec3(0.0,0.0,0.0);
 
-    glm::dvec3 intersection_point = r.p+i.t*r.d;
+    glm::dvec3 intersection_point = r.p + i.t * r.d;
     vector<Light*>::const_iterator it;
     for (it = scene->beginLights(); it != scene->endLights(); it++) {
         I_l = (*it)->getColor();
         ray shadow(intersection_point, (*it)->getDirection(intersection_point), r.getPixel() , r.ctr, r.getAtten(),ray::SHADOW);
         atten = (*it)->distanceAttenuation(intersection_point) * (*it)->shadowAttenuation(shadow, intersection_point);
 
-        L = (*it)->getDirection(r.p+i.t*r.d); // TODO investigate getDirection arg
+        L = (*it)->getDirection(intersection_point); // TODO investigate getDirection arg
         diffuse += atten * kd(i) * I_l * max(0.0, glm::dot(i.N, L));
 
-        R = (2.0 * glm::dot(i.N, L) * i.N) - L;// normalize?
-        specular += atten * ks(i) * I_l * pow(max(0.0, glm::dot(V, R)), shininess(i));
+        R = glm::normalize((2.0 * glm::dot(i.N, L) * i.N) - L);// normalize?
+        specular += atten * ks(i) * I_l * pow(max(0.0, glm::dot(R, V)), shininess(i));
     }
 
     glm::dvec3 colorC = ke(i) + ka(i)*scene->ambient() + diffuse + specular;
