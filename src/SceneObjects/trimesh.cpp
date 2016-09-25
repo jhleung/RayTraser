@@ -107,7 +107,7 @@ bool TrimeshFace::intersectLocal(ray& r, isect& i) const
     if (glm::dot(normal, d_normalized) == 0 ) return false;
     double d = glm::dot(normal, a_coords);
     double t = (d - glm::dot(normal, r.p)) / (glm::dot(normal, d_normalized));
-    if (t < 0.00001) return false;
+    if (t < 0.00001 || t <= RAY_EPSILON) return false;
     glm::dvec3 q = r.p + t * d_normalized; 
     
 
@@ -129,8 +129,10 @@ bool TrimeshFace::intersectLocal(ray& r, isect& i) const
         i.setUVCoordinates(glm::dvec2(alpha, beta));
         i.setBary(q);
         i.setT(t);
-        //i.setN(normal);
-        i.setN(interpolated_normal);
+        if (parent->vertNorms)
+            i.setN(normal);
+        else
+            i.setN(interpolated_normal);
         i.setObject(this);
         i.setMaterial(this->getMaterial());
         return true;

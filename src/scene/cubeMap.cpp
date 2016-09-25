@@ -6,7 +6,7 @@ extern TraceUI* traceUI;
 glm::dvec3 CubeMap::getColor(ray r) const {
 	// YOUR CODE HERE
 	// FIXME: Implement Cube Map here
-	printf("getColor");
+	// printf("getColor");
 	glm::dvec3 dir = r.d;
   	double maxAxis = std::max(std::max(std::fabs(dir[0]),std::fabs(dir[1]))
   							, std::fabs(dir[2]));

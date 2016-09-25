@@ -14,6 +14,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/ray.dir/scene/material.cpp.o"
   "CMakeFiles/ray.dir/scene/ray.cpp.o"
   "CMakeFiles/ray.dir/scene/scene.cpp.o"
+  "CMakeFiles/ray.dir/scene/kdTree.cpp.o"
   "CMakeFiles/ray.dir/SceneObjects/Box.cpp.o"
   "CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o"
   "CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o"

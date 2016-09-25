@@ -397,9 +397,32 @@ src/CMakeFiles/ray.dir/scene/scene.cpp.o.provides: src/CMakeFiles/ray.dir/scene/
 
 src/CMakeFiles/ray.dir/scene/scene.cpp.o.provides.build: src/CMakeFiles/ray.dir/scene/scene.cpp.o
 
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.o: src/CMakeFiles/ray.dir/flags.make
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.o: ../src/scene/kdTree.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ray.dir/scene/kdTree.cpp.o"
+	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ray.dir/scene/kdTree.cpp.o -c /u/jleung/Downloads/CS354_Graphics/A1/ray/src/scene/kdTree.cpp
+
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ray.dir/scene/kdTree.cpp.i"
+	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /u/jleung/Downloads/CS354_Graphics/A1/ray/src/scene/kdTree.cpp > CMakeFiles/ray.dir/scene/kdTree.cpp.i
+
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray.dir/scene/kdTree.cpp.s"
+	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /u/jleung/Downloads/CS354_Graphics/A1/ray/src/scene/kdTree.cpp -o CMakeFiles/ray.dir/scene/kdTree.cpp.s
+
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.o.requires:
+.PHONY : src/CMakeFiles/ray.dir/scene/kdTree.cpp.o.requires
+
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.o.provides: src/CMakeFiles/ray.dir/scene/kdTree.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/kdTree.cpp.o.provides.build
+.PHONY : src/CMakeFiles/ray.dir/scene/kdTree.cpp.o.provides
+
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.o.provides.build: src/CMakeFiles/ray.dir/scene/kdTree.cpp.o
+
 src/CMakeFiles/ray.dir/SceneObjects/Box.cpp.o: src/CMakeFiles/ray.dir/flags.make
 src/CMakeFiles/ray.dir/SceneObjects/Box.cpp.o: ../src/SceneObjects/Box.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ray.dir/SceneObjects/Box.cpp.o"
 	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ray.dir/SceneObjects/Box.cpp.o -c /u/jleung/Downloads/CS354_Graphics/A1/ray/src/SceneObjects/Box.cpp
 
@@ -422,7 +445,7 @@ src/CMakeFiles/ray.dir/SceneObjects/Box.cpp.o.provides.build: src/CMakeFiles/ray
 
 src/CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o: src/CMakeFiles/ray.dir/flags.make
 src/CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o: ../src/SceneObjects/Cone.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o"
 	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o -c /u/jleung/Downloads/CS354_Graphics/A1/ray/src/SceneObjects/Cone.cpp
 
@@ -445,7 +468,7 @@ src/CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o.provides.build: src/CMakeFiles/ra
 
 src/CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o: src/CMakeFiles/ray.dir/flags.make
 src/CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o: ../src/SceneObjects/Cylinder.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o"
 	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o -c /u/jleung/Downloads/CS354_Graphics/A1/ray/src/SceneObjects/Cylinder.cpp
 
@@ -468,7 +491,7 @@ src/CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o.provides.build: src/CMakeFile
 
 src/CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o: src/CMakeFiles/ray.dir/flags.make
 src/CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o: ../src/SceneObjects/Sphere.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o"
 	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o -c /u/jleung/Downloads/CS354_Graphics/A1/ray/src/SceneObjects/Sphere.cpp
 
@@ -491,7 +514,7 @@ src/CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o.provides.build: src/CMakeFiles/
 
 src/CMakeFiles/ray.dir/SceneObjects/Square.cpp.o: src/CMakeFiles/ray.dir/flags.make
 src/CMakeFiles/ray.dir/SceneObjects/Square.cpp.o: ../src/SceneObjects/Square.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ray.dir/SceneObjects/Square.cpp.o"
 	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ray.dir/SceneObjects/Square.cpp.o -c /u/jleung/Downloads/CS354_Graphics/A1/ray/src/SceneObjects/Square.cpp
 
@@ -514,7 +537,7 @@ src/CMakeFiles/ray.dir/SceneObjects/Square.cpp.o.provides.build: src/CMakeFiles/
 
 src/CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o: src/CMakeFiles/ray.dir/flags.make
 src/CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o: ../src/SceneObjects/trimesh.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o"
 	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o -c /u/jleung/Downloads/CS354_Graphics/A1/ray/src/SceneObjects/trimesh.cpp
 
@@ -537,7 +560,7 @@ src/CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o.provides.build: src/CMakeFiles
 
 src/CMakeFiles/ray.dir/ui/CommandLineUI.cpp.o: src/CMakeFiles/ray.dir/flags.make
 src/CMakeFiles/ray.dir/ui/CommandLineUI.cpp.o: ../src/ui/CommandLineUI.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ray.dir/ui/CommandLineUI.cpp.o"
 	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ray.dir/ui/CommandLineUI.cpp.o -c /u/jleung/Downloads/CS354_Graphics/A1/ray/src/ui/CommandLineUI.cpp
 
@@ -560,7 +583,7 @@ src/CMakeFiles/ray.dir/ui/CommandLineUI.cpp.o.provides.build: src/CMakeFiles/ray
 
 src/CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o: src/CMakeFiles/ray.dir/flags.make
 src/CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o: ../src/ui/CubeMapChooser.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o"
 	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o -c /u/jleung/Downloads/CS354_Graphics/A1/ray/src/ui/CubeMapChooser.cxx
 
@@ -583,7 +606,7 @@ src/CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o.provides.build: src/CMakeFiles/ra
 
 src/CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o: src/CMakeFiles/ray.dir/flags.make
 src/CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o: ../src/ui/GraphicalUI.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o"
 	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o -c /u/jleung/Downloads/CS354_Graphics/A1/ray/src/ui/GraphicalUI.cpp
 
@@ -606,7 +629,7 @@ src/CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o.provides.build: src/CMakeFiles/ray.d
 
 src/CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o: src/CMakeFiles/ray.dir/flags.make
 src/CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o: ../src/ui/ModelerCamera.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_25)
+	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_26)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o"
 	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o -c /u/jleung/Downloads/CS354_Graphics/A1/ray/src/ui/ModelerCamera.cpp
 
@@ -629,7 +652,7 @@ src/CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o.provides.build: src/CMakeFiles/ray
 
 src/CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o: src/CMakeFiles/ray.dir/flags.make
 src/CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o: ../src/ui/TraceGLWindow.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_27)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o"
 	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o -c /u/jleung/Downloads/CS354_Graphics/A1/ray/src/ui/TraceGLWindow.cpp
 
@@ -652,7 +675,7 @@ src/CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o.provides.build: src/CMakeFiles/ray
 
 src/CMakeFiles/ray.dir/ui/debuggingView.cpp.o: src/CMakeFiles/ray.dir/flags.make
 src/CMakeFiles/ray.dir/ui/debuggingView.cpp.o: ../src/ui/debuggingView.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_27)
+	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_28)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ray.dir/ui/debuggingView.cpp.o"
 	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ray.dir/ui/debuggingView.cpp.o -c /u/jleung/Downloads/CS354_Graphics/A1/ray/src/ui/debuggingView.cpp
 
@@ -675,7 +698,7 @@ src/CMakeFiles/ray.dir/ui/debuggingView.cpp.o.provides.build: src/CMakeFiles/ray
 
 src/CMakeFiles/ray.dir/ui/debuggingWindow.cxx.o: src/CMakeFiles/ray.dir/flags.make
 src/CMakeFiles/ray.dir/ui/debuggingWindow.cxx.o: ../src/ui/debuggingWindow.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_28)
+	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_29)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ray.dir/ui/debuggingWindow.cxx.o"
 	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ray.dir/ui/debuggingWindow.cxx.o -c /u/jleung/Downloads/CS354_Graphics/A1/ray/src/ui/debuggingWindow.cxx
 
@@ -698,7 +721,7 @@ src/CMakeFiles/ray.dir/ui/debuggingWindow.cxx.o.provides.build: src/CMakeFiles/r
 
 src/CMakeFiles/ray.dir/ui/glObjects.cpp.o: src/CMakeFiles/ray.dir/flags.make
 src/CMakeFiles/ray.dir/ui/glObjects.cpp.o: ../src/ui/glObjects.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_29)
+	$(CMAKE_COMMAND) -E cmake_progress_report /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles $(CMAKE_PROGRESS_30)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ray.dir/ui/glObjects.cpp.o"
 	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src && /lusr/opt/gcc-5.2.0/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ray.dir/ui/glObjects.cpp.o -c /u/jleung/Downloads/CS354_Graphics/A1/ray/src/ui/glObjects.cpp
 
@@ -736,6 +759,7 @@ ray_OBJECTS = \
 "CMakeFiles/ray.dir/scene/material.cpp.o" \
 "CMakeFiles/ray.dir/scene/ray.cpp.o" \
 "CMakeFiles/ray.dir/scene/scene.cpp.o" \
+"CMakeFiles/ray.dir/scene/kdTree.cpp.o" \
 "CMakeFiles/ray.dir/SceneObjects/Box.cpp.o" \
 "CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o" \
 "CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o" \
@@ -769,6 +793,7 @@ bin/ray: src/CMakeFiles/ray.dir/scene/light.cpp.o
 bin/ray: src/CMakeFiles/ray.dir/scene/material.cpp.o
 bin/ray: src/CMakeFiles/ray.dir/scene/ray.cpp.o
 bin/ray: src/CMakeFiles/ray.dir/scene/scene.cpp.o
+bin/ray: src/CMakeFiles/ray.dir/scene/kdTree.cpp.o
 bin/ray: src/CMakeFiles/ray.dir/SceneObjects/Box.cpp.o
 bin/ray: src/CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o
 bin/ray: src/CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o
@@ -828,6 +853,7 @@ src/CMakeFiles/ray.dir/requires: src/CMakeFiles/ray.dir/scene/light.cpp.o.requir
 src/CMakeFiles/ray.dir/requires: src/CMakeFiles/ray.dir/scene/material.cpp.o.requires
 src/CMakeFiles/ray.dir/requires: src/CMakeFiles/ray.dir/scene/ray.cpp.o.requires
 src/CMakeFiles/ray.dir/requires: src/CMakeFiles/ray.dir/scene/scene.cpp.o.requires
+src/CMakeFiles/ray.dir/requires: src/CMakeFiles/ray.dir/scene/kdTree.cpp.o.requires
 src/CMakeFiles/ray.dir/requires: src/CMakeFiles/ray.dir/SceneObjects/Box.cpp.o.requires
 src/CMakeFiles/ray.dir/requires: src/CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o.requires
 src/CMakeFiles/ray.dir/requires: src/CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o.requires

@@ -169,6 +169,15 @@ src/CMakeFiles/ray.dir/scene/cubeMap.cpp.o: ../src/scene/material.h
 src/CMakeFiles/ray.dir/scene/cubeMap.cpp.o: ../src/scene/ray.h
 src/CMakeFiles/ray.dir/scene/cubeMap.cpp.o: ../src/ui/TraceUI.h
 
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.o: ../src/scene/bbox.h
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.o: ../src/scene/camera.h
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.o: ../src/scene/kdTree.cpp
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.o: ../src/scene/kdTree.h
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.o: ../src/scene/material.h
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.o: ../src/scene/ray.h
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.o: ../src/scene/scene.h
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.o: ../src/ui/TraceUI.h
+
 src/CMakeFiles/ray.dir/scene/light.cpp.o: ../src/scene/bbox.h
 src/CMakeFiles/ray.dir/scene/light.cpp.o: ../src/scene/camera.h
 src/CMakeFiles/ray.dir/scene/light.cpp.o: ../src/scene/light.cpp

@@ -169,6 +169,15 @@ src/CMakeFiles/ray.dir/scene/cubeMap.cpp.o
  /u/jleung/Downloads/CS354_Graphics/A1/ray/src/scene/material.h
  /u/jleung/Downloads/CS354_Graphics/A1/ray/src/scene/ray.h
  /u/jleung/Downloads/CS354_Graphics/A1/ray/src/ui/TraceUI.h
+src/CMakeFiles/ray.dir/scene/kdTree.cpp.o
+ /u/jleung/Downloads/CS354_Graphics/A1/ray/src/scene/bbox.h
+ /u/jleung/Downloads/CS354_Graphics/A1/ray/src/scene/camera.h
+ /u/jleung/Downloads/CS354_Graphics/A1/ray/src/scene/kdTree.cpp
+ /u/jleung/Downloads/CS354_Graphics/A1/ray/src/scene/kdTree.h
+ /u/jleung/Downloads/CS354_Graphics/A1/ray/src/scene/material.h
+ /u/jleung/Downloads/CS354_Graphics/A1/ray/src/scene/ray.h
+ /u/jleung/Downloads/CS354_Graphics/A1/ray/src/scene/scene.h
+ /u/jleung/Downloads/CS354_Graphics/A1/ray/src/ui/TraceUI.h
 src/CMakeFiles/ray.dir/scene/light.cpp.o
  /u/jleung/Downloads/CS354_Graphics/A1/ray/src/scene/bbox.h
  /u/jleung/Downloads/CS354_Graphics/A1/ray/src/scene/camera.h
