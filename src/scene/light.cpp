@@ -23,6 +23,7 @@ glm::dvec3 DirectionalLight::shadowAttenuation(const ray& r, const glm::dvec3& p
 	isect i;
 	glm::dvec3 atten;
 	if (scene->intersect(shadow,i)) {
+		// assert(i.t <= 0);
         atten = glm::dvec3(0.0,0.0,0.0);
 	}
 	else {
