@@ -94,7 +94,6 @@ bool TrimeshFace::intersectLocal(ray& r, isect& i) const
     glm::dvec3 b_coords = parent->vertices[ids[1]];
     glm::dvec3 c_coords = parent->vertices[ids[2]];
 
-    // SMOOTH SHADING
     if (parent->normals.size() == 0) {
         parent->generateNormals();
     }
@@ -102,7 +101,6 @@ bool TrimeshFace::intersectLocal(ray& r, isect& i) const
     glm::dvec3 a_normal = parent->normals[ids[0]];
     glm::dvec3 b_normal = parent->normals[ids[1]];
     glm::dvec3 c_normal = parent->normals[ids[2]];
-    // /SMOOTH SHADING
     
     glm::dvec3 d_normalized = glm::normalize(r.d);
 
@@ -126,7 +124,6 @@ bool TrimeshFace::intersectLocal(ray& r, isect& i) const
         double gamma = glm::dot(glm::cross(b_coords - a_coords, q - a_coords), normal)
             / glm::dot(glm::cross(b_coords - a_coords, c_coords - a_coords), normal);
 
-        // SMOOTH SHADING
         glm::dvec3 interpolated_normal = glm::normalize(alpha * a_normal + beta * b_normal + gamma * c_normal);
 
         i.setUVCoordinates(glm::dvec2(alpha, beta));
