@@ -16,10 +16,6 @@ glm/vec3.hpp
 glm/mat3x3.hpp
 -
 
-/u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/scene/kdTree.cpp
-kdTree.h
-/u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/scene/kdTree.h
-
 /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/scene/kdTree.h
 vector
 -
@@ -27,6 +23,16 @@ scene.h
 /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/scene/scene.h
 ray.h
 /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/scene/ray.h
+
+/u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/scene/light.h
+algorithm
+-
+scene.h
+/u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/scene/scene.h
+../ui/TraceUI.h
+/u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/ui/TraceUI.h
+FL/gl.h
+-
 
 /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/scene/material.h
 glm/vec2.hpp
@@ -47,6 +53,24 @@ material.h
 /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/scene/material.h
 ../ui/TraceUI.h
 /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/ui/TraceUI.h
+
+/u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/scene/scene.cpp
+cmath
+-
+scene.h
+/u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/scene/scene.h
+light.h
+/u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/scene/light.h
+kdTree.h
+/u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/scene/kdTree.h
+../ui/TraceUI.h
+/u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/ui/TraceUI.h
+glm/gtx/extented_min_max.hpp
+-
+iostream
+-
+glm/gtx/io.hpp
+-
 
 /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src/scene/scene.h
 vector

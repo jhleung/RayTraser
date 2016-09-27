@@ -128,18 +128,18 @@ bool TrimeshFace::intersectLocal(ray& r, isect& i) const
 
         glm::dvec3 interpolated_normal = glm::normalize(alpha * a_normal + beta * b_normal + gamma * c_normal);
 
-        if (parent->materials.size() > 0) {
-            Material a = alpha * *(parent->materials[ids[0]]);
-            Material b = beta * *(parent->materials[ids[1]]);
-            Material c = gamma * *(parent->materials[ids[2]]);
-            Material accumulate = a;
-            accumulate += b;
-            accumulate +=c;
-            i.setMaterial(accumulate);
-        }
-        else {
+        // if (parent->materials.size() > 0) {
+        //     Material a = alpha * *(parent->materials[ids[0]]);
+        //     Material b = beta * *(parent->materials[ids[1]]);
+        //     Material c = gamma * *(parent->materials[ids[2]]);
+        //     Material accumulate = a;
+        //     accumulate += b;
+        //     accumulate +=c;
+        //     i.setMaterial(accumulate);
+        // }
+        // else {
             i.setMaterial(this->getMaterial());
-        }
+        // }
 
         i.setUVCoordinates(glm::dvec2(alpha, beta));
         i.setBary(q);
