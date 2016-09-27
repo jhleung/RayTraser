@@ -20,6 +20,7 @@
 #include "material.h"
 #include "camera.h"
 #include "bbox.h"
+#include "kdTree.h"
 
 #include <glm/vec3.hpp>
 #include <glm/vec4.hpp>
@@ -31,8 +32,7 @@
 class Light;
 class Scene;
 
-template <typename Obj>
-class KdTree;
+class KDNode;
 
 class SceneElement {
 
@@ -256,7 +256,8 @@ public:
   // are exempt from this requirement.
   BoundingBox sceneBounds;
   
-  KdTree<Geometry>* kdtree;
+  mutable KDNode* kdtree;
+  mutable bool kdTreeExists = false;
 
  public:
   // This is used for debugging purposes only.

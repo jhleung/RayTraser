@@ -115,6 +115,9 @@ public:
 		return bVolume;
 	}
 
+	glm::dvec3 midpoint() {
+		return glm::dvec3(bmax[0]+bmin[0], bmax[1]+bmin[1],bmax[2]+bmin[2])/2.0;
+	}
 	void merge(const BoundingBox& bBox)	{
 		if (bBox.bEmpty) return;
 		for (int axis = 0; axis < 3; axis++) {

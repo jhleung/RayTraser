@@ -102,6 +102,7 @@ bool TrimeshFace::intersectLocal(ray& r, isect& i) const
     glm::dvec3 b_normal = parent->normals[ids[1]];
     glm::dvec3 c_normal = parent->normals[ids[2]];
     
+
     glm::dvec3 d_normalized = glm::normalize(r.d);
 
     if (glm::dot(normal, d_normalized) == 0 ) return false;
@@ -115,16 +116,30 @@ bool TrimeshFace::intersectLocal(ray& r, isect& i) const
         && glm::dot(glm::cross(c_coords - b_coords, q - b_coords), normal) >= 0
         && glm::dot(glm::cross(a_coords - c_coords, q - c_coords), normal) >= 0) {
         // compute barycentric coordinates
+        double denominator = glm::dot(glm::cross(b_coords - a_coords, c_coords - a_coords), normal);
         double alpha = glm::dot(glm::cross(c_coords - b_coords, q - b_coords), normal)
-            / glm::dot(glm::cross(b_coords - a_coords, c_coords - a_coords), normal);
+            / denominator;
 
         double beta = glm::dot(glm::cross(a_coords - c_coords, q - c_coords), normal)
-            / glm::dot(glm::cross(b_coords - a_coords, c_coords - a_coords), normal);
+            / denominator;
 
         double gamma = glm::dot(glm::cross(b_coords - a_coords, q - a_coords), normal)
-            / glm::dot(glm::cross(b_coords - a_coords, c_coords - a_coords), normal);
+            / denominator;
 
         glm::dvec3 interpolated_normal = glm::normalize(alpha * a_normal + beta * b_normal + gamma * c_normal);
+
+        if (parent->materials.size() > 0) {
+            Material a = alpha * *(parent->materials[ids[0]]);
+            Material b = beta * *(parent->materials[ids[1]]);
+            Material c = gamma * *(parent->materials[ids[2]]);
+            Material accumulate = a;
+            accumulate += b;
+            accumulate +=c;
+            i.setMaterial(accumulate);
+        }
+        else {
+            i.setMaterial(this->getMaterial());
+        }
 
         i.setUVCoordinates(glm::dvec2(alpha, beta));
         i.setBary(q);
@@ -134,7 +149,7 @@ bool TrimeshFace::intersectLocal(ray& r, isect& i) const
         else
             i.setN(interpolated_normal);
         i.setObject(this);
-        i.setMaterial(this->getMaterial());
+       
         return true;
     } 
     else {

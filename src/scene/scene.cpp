@@ -102,6 +102,12 @@ Scene::~Scene() {
 // Get any intersection with an object.  Return information about the 
 // intersection through the reference parameter.
 bool Scene::intersect(ray& r, isect& i) const {
+	// if (!kdTreeExists) {
+	// 	kdtree = KDNode::buildKDT(objects,0);
+	// 	kdTreeExists = true;
+	// }
+	// return kdtree->kdIntersect(kdtree, r, i);
+
 	double tmin = 0.0;
 	double tmax = 0.0;
 	bool have_one = false;
