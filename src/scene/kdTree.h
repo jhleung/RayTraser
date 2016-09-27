@@ -3,19 +3,19 @@
 #include <vector>
 
 #include "scene.h"
-
+#include "ray.h"
 // Note: you can put kd-tree here
 class KDNode {
 
 public:
 	BoundingBox bbox; 
-	KDNode *left;
-	KDNode *right;
+	KDNode* left;
+	KDNode* right;
 	std::vector <Geometry*> triangles;
 
 public:
-	KDNode();
+	// KDNode();
 
-	KDNode* buildKDT(std::vector<Geometry*> triangles, int depth) const;
-
+	static KDNode* buildKDT(std::vector<Geometry*> triangles, int depth);
+	bool hit(KDNode* node, ray& ray, isect i);
 };

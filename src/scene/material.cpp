@@ -54,10 +54,11 @@ glm::dvec3 Material::shade(Scene *scene, const ray& r, const isect& i) const
 
     glm::dvec3 L = glm::dvec3(0.0,0.0,0.0); 
 
-    glm::dvec3 V =  -1.0 * r.d;//scene->getCamera().getLook();// -1.0 * r.d; // TODO: check this calculation , multiply by -1?
     glm::dvec3 R = glm::dvec3(0.0,0.0,0.0);
 
     glm::dvec3 intersection_point = r.p + i.t * r.d;
+    glm::dvec3 V =  glm::normalize(intersection_point - scene->getCamera().getEye());//-1.0 * r.d;//scene->getCamera().getLook();// -1.0 * r.d; // TODO: check this calculation , multiply by -1?
+
     vector<Light*>::const_iterator it;
     for (it = scene->beginLights(); it != scene->endLights(); it++) {
         I_l = (*it)->getColor();
@@ -67,7 +68,7 @@ glm::dvec3 Material::shade(Scene *scene, const ray& r, const isect& i) const
         L = (*it)->getDirection(intersection_point); // TODO investigate getDirection arg
         diffuse += atten * kd(i) * I_l * max(0.0, glm::dot(i.N, L));
 
-        R = glm::normalize((2.0 * glm::dot(i.N, L) * i.N) - L);// normalize?
+        R = glm::normalize(L-(2.0 * glm::dot(i.N, L) * i.N));// normalize?
         specular += atten * ks(i) * I_l * pow(max(0.0, glm::dot(R, V)), shininess(i));
     }
 
@@ -131,7 +132,7 @@ glm::dvec3 TextureMap::getMappedValue( const glm::dvec2& coord ) const
 	double x_delta = a - i;
 	double y_delta = b - j;
 	
-	return (1-x_delta)*(1-y_delta)*getPixelAt(i,j);
+	return (1-x_delta)*(1-y_delta)*getPixelAt(i,j)
 			+ x_delta*(1-y_delta)*getPixelAt(i+1,j)
 			+ (1-x_delta)*y_delta*getPixelAt(i,j+1)
 			+ x_delta*y_delta*getPixelAt(i+1,j+1);

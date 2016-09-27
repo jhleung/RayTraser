@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /u/jleung/Downloads/CS354_Graphics/A1/ray
+CMAKE_SOURCE_DIR = /u/jleung/Downloads/CS354_Graphics/A1/RayTracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /u/jleung/Downloads/CS354_Graphics/A1/ray/build
+CMAKE_BINARY_DIR = /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,14 +72,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(CMAKE_COMMAND) -E cmake_progress_start /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles /u/jleung/Downloads/CS354_Graphics/A1/ray/build/src/CMakeFiles/progress.marks
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /u/jleung/Downloads/CS354_Graphics/A1/ray/build/CMakeFiles 0
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(CMAKE_COMMAND) -E cmake_progress_start /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build/CMakeFiles /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build/src/CMakeFiles/progress.marks
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -88,22 +88,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/ray.dir/rule:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/ray.dir/rule
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/ray.dir/rule
 .PHONY : src/CMakeFiles/ray.dir/rule
 
 # Convenience name for target.
@@ -112,7 +112,7 @@ ray: src/CMakeFiles/ray.dir/rule
 
 # fast build rule for target.
 ray/fast:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/build
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/build
 .PHONY : ray/fast
 
 RayTracer.o: RayTracer.cpp.o
@@ -120,7 +120,7 @@ RayTracer.o: RayTracer.cpp.o
 
 # target to build an object file
 RayTracer.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/RayTracer.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/RayTracer.cpp.o
 .PHONY : RayTracer.cpp.o
 
 RayTracer.i: RayTracer.cpp.i
@@ -128,7 +128,7 @@ RayTracer.i: RayTracer.cpp.i
 
 # target to preprocess a source file
 RayTracer.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/RayTracer.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/RayTracer.cpp.i
 .PHONY : RayTracer.cpp.i
 
 RayTracer.s: RayTracer.cpp.s
@@ -136,7 +136,7 @@ RayTracer.s: RayTracer.cpp.s
 
 # target to generate assembly for a file
 RayTracer.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/RayTracer.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/RayTracer.cpp.s
 .PHONY : RayTracer.cpp.s
 
 SceneObjects/Box.o: SceneObjects/Box.cpp.o
@@ -144,7 +144,7 @@ SceneObjects/Box.o: SceneObjects/Box.cpp.o
 
 # target to build an object file
 SceneObjects/Box.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Box.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Box.cpp.o
 .PHONY : SceneObjects/Box.cpp.o
 
 SceneObjects/Box.i: SceneObjects/Box.cpp.i
@@ -152,7 +152,7 @@ SceneObjects/Box.i: SceneObjects/Box.cpp.i
 
 # target to preprocess a source file
 SceneObjects/Box.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Box.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Box.cpp.i
 .PHONY : SceneObjects/Box.cpp.i
 
 SceneObjects/Box.s: SceneObjects/Box.cpp.s
@@ -160,7 +160,7 @@ SceneObjects/Box.s: SceneObjects/Box.cpp.s
 
 # target to generate assembly for a file
 SceneObjects/Box.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Box.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Box.cpp.s
 .PHONY : SceneObjects/Box.cpp.s
 
 SceneObjects/Cone.o: SceneObjects/Cone.cpp.o
@@ -168,7 +168,7 @@ SceneObjects/Cone.o: SceneObjects/Cone.cpp.o
 
 # target to build an object file
 SceneObjects/Cone.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o
 .PHONY : SceneObjects/Cone.cpp.o
 
 SceneObjects/Cone.i: SceneObjects/Cone.cpp.i
@@ -176,7 +176,7 @@ SceneObjects/Cone.i: SceneObjects/Cone.cpp.i
 
 # target to preprocess a source file
 SceneObjects/Cone.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Cone.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Cone.cpp.i
 .PHONY : SceneObjects/Cone.cpp.i
 
 SceneObjects/Cone.s: SceneObjects/Cone.cpp.s
@@ -184,7 +184,7 @@ SceneObjects/Cone.s: SceneObjects/Cone.cpp.s
 
 # target to generate assembly for a file
 SceneObjects/Cone.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Cone.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Cone.cpp.s
 .PHONY : SceneObjects/Cone.cpp.s
 
 SceneObjects/Cylinder.o: SceneObjects/Cylinder.cpp.o
@@ -192,7 +192,7 @@ SceneObjects/Cylinder.o: SceneObjects/Cylinder.cpp.o
 
 # target to build an object file
 SceneObjects/Cylinder.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o
 .PHONY : SceneObjects/Cylinder.cpp.o
 
 SceneObjects/Cylinder.i: SceneObjects/Cylinder.cpp.i
@@ -200,7 +200,7 @@ SceneObjects/Cylinder.i: SceneObjects/Cylinder.cpp.i
 
 # target to preprocess a source file
 SceneObjects/Cylinder.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.i
 .PHONY : SceneObjects/Cylinder.cpp.i
 
 SceneObjects/Cylinder.s: SceneObjects/Cylinder.cpp.s
@@ -208,7 +208,7 @@ SceneObjects/Cylinder.s: SceneObjects/Cylinder.cpp.s
 
 # target to generate assembly for a file
 SceneObjects/Cylinder.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.s
 .PHONY : SceneObjects/Cylinder.cpp.s
 
 SceneObjects/Sphere.o: SceneObjects/Sphere.cpp.o
@@ -216,7 +216,7 @@ SceneObjects/Sphere.o: SceneObjects/Sphere.cpp.o
 
 # target to build an object file
 SceneObjects/Sphere.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o
 .PHONY : SceneObjects/Sphere.cpp.o
 
 SceneObjects/Sphere.i: SceneObjects/Sphere.cpp.i
@@ -224,7 +224,7 @@ SceneObjects/Sphere.i: SceneObjects/Sphere.cpp.i
 
 # target to preprocess a source file
 SceneObjects/Sphere.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.i
 .PHONY : SceneObjects/Sphere.cpp.i
 
 SceneObjects/Sphere.s: SceneObjects/Sphere.cpp.s
@@ -232,7 +232,7 @@ SceneObjects/Sphere.s: SceneObjects/Sphere.cpp.s
 
 # target to generate assembly for a file
 SceneObjects/Sphere.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.s
 .PHONY : SceneObjects/Sphere.cpp.s
 
 SceneObjects/Square.o: SceneObjects/Square.cpp.o
@@ -240,7 +240,7 @@ SceneObjects/Square.o: SceneObjects/Square.cpp.o
 
 # target to build an object file
 SceneObjects/Square.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Square.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Square.cpp.o
 .PHONY : SceneObjects/Square.cpp.o
 
 SceneObjects/Square.i: SceneObjects/Square.cpp.i
@@ -248,7 +248,7 @@ SceneObjects/Square.i: SceneObjects/Square.cpp.i
 
 # target to preprocess a source file
 SceneObjects/Square.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Square.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Square.cpp.i
 .PHONY : SceneObjects/Square.cpp.i
 
 SceneObjects/Square.s: SceneObjects/Square.cpp.s
@@ -256,7 +256,7 @@ SceneObjects/Square.s: SceneObjects/Square.cpp.s
 
 # target to generate assembly for a file
 SceneObjects/Square.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Square.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/Square.cpp.s
 .PHONY : SceneObjects/Square.cpp.s
 
 SceneObjects/trimesh.o: SceneObjects/trimesh.cpp.o
@@ -264,7 +264,7 @@ SceneObjects/trimesh.o: SceneObjects/trimesh.cpp.o
 
 # target to build an object file
 SceneObjects/trimesh.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o
 .PHONY : SceneObjects/trimesh.cpp.o
 
 SceneObjects/trimesh.i: SceneObjects/trimesh.cpp.i
@@ -272,7 +272,7 @@ SceneObjects/trimesh.i: SceneObjects/trimesh.cpp.i
 
 # target to preprocess a source file
 SceneObjects/trimesh.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.i
 .PHONY : SceneObjects/trimesh.cpp.i
 
 SceneObjects/trimesh.s: SceneObjects/trimesh.cpp.s
@@ -280,7 +280,7 @@ SceneObjects/trimesh.s: SceneObjects/trimesh.cpp.s
 
 # target to generate assembly for a file
 SceneObjects/trimesh.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.s
 .PHONY : SceneObjects/trimesh.cpp.s
 
 fileio/bitmap.o: fileio/bitmap.cpp.o
@@ -288,7 +288,7 @@ fileio/bitmap.o: fileio/bitmap.cpp.o
 
 # target to build an object file
 fileio/bitmap.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/bitmap.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/bitmap.cpp.o
 .PHONY : fileio/bitmap.cpp.o
 
 fileio/bitmap.i: fileio/bitmap.cpp.i
@@ -296,7 +296,7 @@ fileio/bitmap.i: fileio/bitmap.cpp.i
 
 # target to preprocess a source file
 fileio/bitmap.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/bitmap.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/bitmap.cpp.i
 .PHONY : fileio/bitmap.cpp.i
 
 fileio/bitmap.s: fileio/bitmap.cpp.s
@@ -304,7 +304,7 @@ fileio/bitmap.s: fileio/bitmap.cpp.s
 
 # target to generate assembly for a file
 fileio/bitmap.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/bitmap.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/bitmap.cpp.s
 .PHONY : fileio/bitmap.cpp.s
 
 fileio/buffer.o: fileio/buffer.cpp.o
@@ -312,7 +312,7 @@ fileio/buffer.o: fileio/buffer.cpp.o
 
 # target to build an object file
 fileio/buffer.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/buffer.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/buffer.cpp.o
 .PHONY : fileio/buffer.cpp.o
 
 fileio/buffer.i: fileio/buffer.cpp.i
@@ -320,7 +320,7 @@ fileio/buffer.i: fileio/buffer.cpp.i
 
 # target to preprocess a source file
 fileio/buffer.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/buffer.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/buffer.cpp.i
 .PHONY : fileio/buffer.cpp.i
 
 fileio/buffer.s: fileio/buffer.cpp.s
@@ -328,7 +328,7 @@ fileio/buffer.s: fileio/buffer.cpp.s
 
 # target to generate assembly for a file
 fileio/buffer.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/buffer.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/buffer.cpp.s
 .PHONY : fileio/buffer.cpp.s
 
 fileio/pngimage.o: fileio/pngimage.cpp.o
@@ -336,7 +336,7 @@ fileio/pngimage.o: fileio/pngimage.cpp.o
 
 # target to build an object file
 fileio/pngimage.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/pngimage.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/pngimage.cpp.o
 .PHONY : fileio/pngimage.cpp.o
 
 fileio/pngimage.i: fileio/pngimage.cpp.i
@@ -344,7 +344,7 @@ fileio/pngimage.i: fileio/pngimage.cpp.i
 
 # target to preprocess a source file
 fileio/pngimage.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/pngimage.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/pngimage.cpp.i
 .PHONY : fileio/pngimage.cpp.i
 
 fileio/pngimage.s: fileio/pngimage.cpp.s
@@ -352,7 +352,7 @@ fileio/pngimage.s: fileio/pngimage.cpp.s
 
 # target to generate assembly for a file
 fileio/pngimage.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/pngimage.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/fileio/pngimage.cpp.s
 .PHONY : fileio/pngimage.cpp.s
 
 main.o: main.cpp.o
@@ -360,7 +360,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/main.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -368,7 +368,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/main.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -376,7 +376,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/main.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 parser/Parser.o: parser/Parser.cpp.o
@@ -384,7 +384,7 @@ parser/Parser.o: parser/Parser.cpp.o
 
 # target to build an object file
 parser/Parser.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Parser.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Parser.cpp.o
 .PHONY : parser/Parser.cpp.o
 
 parser/Parser.i: parser/Parser.cpp.i
@@ -392,7 +392,7 @@ parser/Parser.i: parser/Parser.cpp.i
 
 # target to preprocess a source file
 parser/Parser.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Parser.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Parser.cpp.i
 .PHONY : parser/Parser.cpp.i
 
 parser/Parser.s: parser/Parser.cpp.s
@@ -400,7 +400,7 @@ parser/Parser.s: parser/Parser.cpp.s
 
 # target to generate assembly for a file
 parser/Parser.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Parser.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Parser.cpp.s
 .PHONY : parser/Parser.cpp.s
 
 parser/ParserException.o: parser/ParserException.cpp.o
@@ -408,7 +408,7 @@ parser/ParserException.o: parser/ParserException.cpp.o
 
 # target to build an object file
 parser/ParserException.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/ParserException.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/ParserException.cpp.o
 .PHONY : parser/ParserException.cpp.o
 
 parser/ParserException.i: parser/ParserException.cpp.i
@@ -416,7 +416,7 @@ parser/ParserException.i: parser/ParserException.cpp.i
 
 # target to preprocess a source file
 parser/ParserException.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/ParserException.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/ParserException.cpp.i
 .PHONY : parser/ParserException.cpp.i
 
 parser/ParserException.s: parser/ParserException.cpp.s
@@ -424,7 +424,7 @@ parser/ParserException.s: parser/ParserException.cpp.s
 
 # target to generate assembly for a file
 parser/ParserException.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/ParserException.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/ParserException.cpp.s
 .PHONY : parser/ParserException.cpp.s
 
 parser/Token.o: parser/Token.cpp.o
@@ -432,7 +432,7 @@ parser/Token.o: parser/Token.cpp.o
 
 # target to build an object file
 parser/Token.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Token.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Token.cpp.o
 .PHONY : parser/Token.cpp.o
 
 parser/Token.i: parser/Token.cpp.i
@@ -440,7 +440,7 @@ parser/Token.i: parser/Token.cpp.i
 
 # target to preprocess a source file
 parser/Token.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Token.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Token.cpp.i
 .PHONY : parser/Token.cpp.i
 
 parser/Token.s: parser/Token.cpp.s
@@ -448,7 +448,7 @@ parser/Token.s: parser/Token.cpp.s
 
 # target to generate assembly for a file
 parser/Token.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Token.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Token.cpp.s
 .PHONY : parser/Token.cpp.s
 
 parser/Tokenizer.o: parser/Tokenizer.cpp.o
@@ -456,7 +456,7 @@ parser/Tokenizer.o: parser/Tokenizer.cpp.o
 
 # target to build an object file
 parser/Tokenizer.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Tokenizer.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Tokenizer.cpp.o
 .PHONY : parser/Tokenizer.cpp.o
 
 parser/Tokenizer.i: parser/Tokenizer.cpp.i
@@ -464,7 +464,7 @@ parser/Tokenizer.i: parser/Tokenizer.cpp.i
 
 # target to preprocess a source file
 parser/Tokenizer.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Tokenizer.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Tokenizer.cpp.i
 .PHONY : parser/Tokenizer.cpp.i
 
 parser/Tokenizer.s: parser/Tokenizer.cpp.s
@@ -472,7 +472,7 @@ parser/Tokenizer.s: parser/Tokenizer.cpp.s
 
 # target to generate assembly for a file
 parser/Tokenizer.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Tokenizer.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/parser/Tokenizer.cpp.s
 .PHONY : parser/Tokenizer.cpp.s
 
 scene/camera.o: scene/camera.cpp.o
@@ -480,7 +480,7 @@ scene/camera.o: scene/camera.cpp.o
 
 # target to build an object file
 scene/camera.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/camera.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/camera.cpp.o
 .PHONY : scene/camera.cpp.o
 
 scene/camera.i: scene/camera.cpp.i
@@ -488,7 +488,7 @@ scene/camera.i: scene/camera.cpp.i
 
 # target to preprocess a source file
 scene/camera.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/camera.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/camera.cpp.i
 .PHONY : scene/camera.cpp.i
 
 scene/camera.s: scene/camera.cpp.s
@@ -496,7 +496,7 @@ scene/camera.s: scene/camera.cpp.s
 
 # target to generate assembly for a file
 scene/camera.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/camera.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/camera.cpp.s
 .PHONY : scene/camera.cpp.s
 
 scene/cubeMap.o: scene/cubeMap.cpp.o
@@ -504,7 +504,7 @@ scene/cubeMap.o: scene/cubeMap.cpp.o
 
 # target to build an object file
 scene/cubeMap.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/cubeMap.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/cubeMap.cpp.o
 .PHONY : scene/cubeMap.cpp.o
 
 scene/cubeMap.i: scene/cubeMap.cpp.i
@@ -512,7 +512,7 @@ scene/cubeMap.i: scene/cubeMap.cpp.i
 
 # target to preprocess a source file
 scene/cubeMap.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/cubeMap.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/cubeMap.cpp.i
 .PHONY : scene/cubeMap.cpp.i
 
 scene/cubeMap.s: scene/cubeMap.cpp.s
@@ -520,7 +520,7 @@ scene/cubeMap.s: scene/cubeMap.cpp.s
 
 # target to generate assembly for a file
 scene/cubeMap.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/cubeMap.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/cubeMap.cpp.s
 .PHONY : scene/cubeMap.cpp.s
 
 scene/kdTree.o: scene/kdTree.cpp.o
@@ -528,7 +528,7 @@ scene/kdTree.o: scene/kdTree.cpp.o
 
 # target to build an object file
 scene/kdTree.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/kdTree.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/kdTree.cpp.o
 .PHONY : scene/kdTree.cpp.o
 
 scene/kdTree.i: scene/kdTree.cpp.i
@@ -536,7 +536,7 @@ scene/kdTree.i: scene/kdTree.cpp.i
 
 # target to preprocess a source file
 scene/kdTree.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/kdTree.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/kdTree.cpp.i
 .PHONY : scene/kdTree.cpp.i
 
 scene/kdTree.s: scene/kdTree.cpp.s
@@ -544,7 +544,7 @@ scene/kdTree.s: scene/kdTree.cpp.s
 
 # target to generate assembly for a file
 scene/kdTree.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/kdTree.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/kdTree.cpp.s
 .PHONY : scene/kdTree.cpp.s
 
 scene/light.o: scene/light.cpp.o
@@ -552,7 +552,7 @@ scene/light.o: scene/light.cpp.o
 
 # target to build an object file
 scene/light.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/light.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/light.cpp.o
 .PHONY : scene/light.cpp.o
 
 scene/light.i: scene/light.cpp.i
@@ -560,7 +560,7 @@ scene/light.i: scene/light.cpp.i
 
 # target to preprocess a source file
 scene/light.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/light.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/light.cpp.i
 .PHONY : scene/light.cpp.i
 
 scene/light.s: scene/light.cpp.s
@@ -568,7 +568,7 @@ scene/light.s: scene/light.cpp.s
 
 # target to generate assembly for a file
 scene/light.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/light.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/light.cpp.s
 .PHONY : scene/light.cpp.s
 
 scene/material.o: scene/material.cpp.o
@@ -576,7 +576,7 @@ scene/material.o: scene/material.cpp.o
 
 # target to build an object file
 scene/material.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/material.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/material.cpp.o
 .PHONY : scene/material.cpp.o
 
 scene/material.i: scene/material.cpp.i
@@ -584,7 +584,7 @@ scene/material.i: scene/material.cpp.i
 
 # target to preprocess a source file
 scene/material.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/material.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/material.cpp.i
 .PHONY : scene/material.cpp.i
 
 scene/material.s: scene/material.cpp.s
@@ -592,7 +592,7 @@ scene/material.s: scene/material.cpp.s
 
 # target to generate assembly for a file
 scene/material.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/material.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/material.cpp.s
 .PHONY : scene/material.cpp.s
 
 scene/ray.o: scene/ray.cpp.o
@@ -600,7 +600,7 @@ scene/ray.o: scene/ray.cpp.o
 
 # target to build an object file
 scene/ray.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/ray.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/ray.cpp.o
 .PHONY : scene/ray.cpp.o
 
 scene/ray.i: scene/ray.cpp.i
@@ -608,7 +608,7 @@ scene/ray.i: scene/ray.cpp.i
 
 # target to preprocess a source file
 scene/ray.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/ray.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/ray.cpp.i
 .PHONY : scene/ray.cpp.i
 
 scene/ray.s: scene/ray.cpp.s
@@ -616,7 +616,7 @@ scene/ray.s: scene/ray.cpp.s
 
 # target to generate assembly for a file
 scene/ray.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/ray.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/ray.cpp.s
 .PHONY : scene/ray.cpp.s
 
 scene/scene.o: scene/scene.cpp.o
@@ -624,7 +624,7 @@ scene/scene.o: scene/scene.cpp.o
 
 # target to build an object file
 scene/scene.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/scene.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/scene.cpp.o
 .PHONY : scene/scene.cpp.o
 
 scene/scene.i: scene/scene.cpp.i
@@ -632,7 +632,7 @@ scene/scene.i: scene/scene.cpp.i
 
 # target to preprocess a source file
 scene/scene.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/scene.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/scene.cpp.i
 .PHONY : scene/scene.cpp.i
 
 scene/scene.s: scene/scene.cpp.s
@@ -640,7 +640,7 @@ scene/scene.s: scene/scene.cpp.s
 
 # target to generate assembly for a file
 scene/scene.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/scene.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/scene/scene.cpp.s
 .PHONY : scene/scene.cpp.s
 
 ui/CommandLineUI.o: ui/CommandLineUI.cpp.o
@@ -648,7 +648,7 @@ ui/CommandLineUI.o: ui/CommandLineUI.cpp.o
 
 # target to build an object file
 ui/CommandLineUI.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/CommandLineUI.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/CommandLineUI.cpp.o
 .PHONY : ui/CommandLineUI.cpp.o
 
 ui/CommandLineUI.i: ui/CommandLineUI.cpp.i
@@ -656,7 +656,7 @@ ui/CommandLineUI.i: ui/CommandLineUI.cpp.i
 
 # target to preprocess a source file
 ui/CommandLineUI.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/CommandLineUI.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/CommandLineUI.cpp.i
 .PHONY : ui/CommandLineUI.cpp.i
 
 ui/CommandLineUI.s: ui/CommandLineUI.cpp.s
@@ -664,7 +664,7 @@ ui/CommandLineUI.s: ui/CommandLineUI.cpp.s
 
 # target to generate assembly for a file
 ui/CommandLineUI.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/CommandLineUI.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/CommandLineUI.cpp.s
 .PHONY : ui/CommandLineUI.cpp.s
 
 ui/CubeMapChooser.o: ui/CubeMapChooser.cxx.o
@@ -672,7 +672,7 @@ ui/CubeMapChooser.o: ui/CubeMapChooser.cxx.o
 
 # target to build an object file
 ui/CubeMapChooser.cxx.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o
 .PHONY : ui/CubeMapChooser.cxx.o
 
 ui/CubeMapChooser.i: ui/CubeMapChooser.cxx.i
@@ -680,7 +680,7 @@ ui/CubeMapChooser.i: ui/CubeMapChooser.cxx.i
 
 # target to preprocess a source file
 ui/CubeMapChooser.cxx.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.i
 .PHONY : ui/CubeMapChooser.cxx.i
 
 ui/CubeMapChooser.s: ui/CubeMapChooser.cxx.s
@@ -688,7 +688,7 @@ ui/CubeMapChooser.s: ui/CubeMapChooser.cxx.s
 
 # target to generate assembly for a file
 ui/CubeMapChooser.cxx.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.s
 .PHONY : ui/CubeMapChooser.cxx.s
 
 ui/GraphicalUI.o: ui/GraphicalUI.cpp.o
@@ -696,7 +696,7 @@ ui/GraphicalUI.o: ui/GraphicalUI.cpp.o
 
 # target to build an object file
 ui/GraphicalUI.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o
 .PHONY : ui/GraphicalUI.cpp.o
 
 ui/GraphicalUI.i: ui/GraphicalUI.cpp.i
@@ -704,7 +704,7 @@ ui/GraphicalUI.i: ui/GraphicalUI.cpp.i
 
 # target to preprocess a source file
 ui/GraphicalUI.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/GraphicalUI.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/GraphicalUI.cpp.i
 .PHONY : ui/GraphicalUI.cpp.i
 
 ui/GraphicalUI.s: ui/GraphicalUI.cpp.s
@@ -712,7 +712,7 @@ ui/GraphicalUI.s: ui/GraphicalUI.cpp.s
 
 # target to generate assembly for a file
 ui/GraphicalUI.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/GraphicalUI.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/GraphicalUI.cpp.s
 .PHONY : ui/GraphicalUI.cpp.s
 
 ui/ModelerCamera.o: ui/ModelerCamera.cpp.o
@@ -720,7 +720,7 @@ ui/ModelerCamera.o: ui/ModelerCamera.cpp.o
 
 # target to build an object file
 ui/ModelerCamera.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o
 .PHONY : ui/ModelerCamera.cpp.o
 
 ui/ModelerCamera.i: ui/ModelerCamera.cpp.i
@@ -728,7 +728,7 @@ ui/ModelerCamera.i: ui/ModelerCamera.cpp.i
 
 # target to preprocess a source file
 ui/ModelerCamera.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/ModelerCamera.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/ModelerCamera.cpp.i
 .PHONY : ui/ModelerCamera.cpp.i
 
 ui/ModelerCamera.s: ui/ModelerCamera.cpp.s
@@ -736,7 +736,7 @@ ui/ModelerCamera.s: ui/ModelerCamera.cpp.s
 
 # target to generate assembly for a file
 ui/ModelerCamera.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/ModelerCamera.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/ModelerCamera.cpp.s
 .PHONY : ui/ModelerCamera.cpp.s
 
 ui/TraceGLWindow.o: ui/TraceGLWindow.cpp.o
@@ -744,7 +744,7 @@ ui/TraceGLWindow.o: ui/TraceGLWindow.cpp.o
 
 # target to build an object file
 ui/TraceGLWindow.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o
 .PHONY : ui/TraceGLWindow.cpp.o
 
 ui/TraceGLWindow.i: ui/TraceGLWindow.cpp.i
@@ -752,7 +752,7 @@ ui/TraceGLWindow.i: ui/TraceGLWindow.cpp.i
 
 # target to preprocess a source file
 ui/TraceGLWindow.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.i
 .PHONY : ui/TraceGLWindow.cpp.i
 
 ui/TraceGLWindow.s: ui/TraceGLWindow.cpp.s
@@ -760,7 +760,7 @@ ui/TraceGLWindow.s: ui/TraceGLWindow.cpp.s
 
 # target to generate assembly for a file
 ui/TraceGLWindow.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.s
 .PHONY : ui/TraceGLWindow.cpp.s
 
 ui/debuggingView.o: ui/debuggingView.cpp.o
@@ -768,7 +768,7 @@ ui/debuggingView.o: ui/debuggingView.cpp.o
 
 # target to build an object file
 ui/debuggingView.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/debuggingView.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/debuggingView.cpp.o
 .PHONY : ui/debuggingView.cpp.o
 
 ui/debuggingView.i: ui/debuggingView.cpp.i
@@ -776,7 +776,7 @@ ui/debuggingView.i: ui/debuggingView.cpp.i
 
 # target to preprocess a source file
 ui/debuggingView.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/debuggingView.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/debuggingView.cpp.i
 .PHONY : ui/debuggingView.cpp.i
 
 ui/debuggingView.s: ui/debuggingView.cpp.s
@@ -784,7 +784,7 @@ ui/debuggingView.s: ui/debuggingView.cpp.s
 
 # target to generate assembly for a file
 ui/debuggingView.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/debuggingView.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/debuggingView.cpp.s
 .PHONY : ui/debuggingView.cpp.s
 
 ui/debuggingWindow.o: ui/debuggingWindow.cxx.o
@@ -792,7 +792,7 @@ ui/debuggingWindow.o: ui/debuggingWindow.cxx.o
 
 # target to build an object file
 ui/debuggingWindow.cxx.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/debuggingWindow.cxx.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/debuggingWindow.cxx.o
 .PHONY : ui/debuggingWindow.cxx.o
 
 ui/debuggingWindow.i: ui/debuggingWindow.cxx.i
@@ -800,7 +800,7 @@ ui/debuggingWindow.i: ui/debuggingWindow.cxx.i
 
 # target to preprocess a source file
 ui/debuggingWindow.cxx.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/debuggingWindow.cxx.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/debuggingWindow.cxx.i
 .PHONY : ui/debuggingWindow.cxx.i
 
 ui/debuggingWindow.s: ui/debuggingWindow.cxx.s
@@ -808,7 +808,7 @@ ui/debuggingWindow.s: ui/debuggingWindow.cxx.s
 
 # target to generate assembly for a file
 ui/debuggingWindow.cxx.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/debuggingWindow.cxx.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/debuggingWindow.cxx.s
 .PHONY : ui/debuggingWindow.cxx.s
 
 ui/glObjects.o: ui/glObjects.cpp.o
@@ -816,7 +816,7 @@ ui/glObjects.o: ui/glObjects.cpp.o
 
 # target to build an object file
 ui/glObjects.cpp.o:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/glObjects.cpp.o
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/glObjects.cpp.o
 .PHONY : ui/glObjects.cpp.o
 
 ui/glObjects.i: ui/glObjects.cpp.i
@@ -824,7 +824,7 @@ ui/glObjects.i: ui/glObjects.cpp.i
 
 # target to preprocess a source file
 ui/glObjects.cpp.i:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/glObjects.cpp.i
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/glObjects.cpp.i
 .PHONY : ui/glObjects.cpp.i
 
 ui/glObjects.s: ui/glObjects.cpp.s
@@ -832,7 +832,7 @@ ui/glObjects.s: ui/glObjects.cpp.s
 
 # target to generate assembly for a file
 ui/glObjects.cpp.s:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/glObjects.cpp.s
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(MAKE) -f src/CMakeFiles/ray.dir/build.make src/CMakeFiles/ray.dir/ui/glObjects.cpp.s
 .PHONY : ui/glObjects.cpp.s
 
 # Help Target
@@ -945,6 +945,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /u/jleung/Downloads/CS354_Graphics/A1/ray/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,4 +1,4 @@
-# Install script for directory: /u/jleung/Downloads/CS354_Graphics/A1/ray/src
+# Install script for directory: /u/jleung/Downloads/CS354_Graphics/A1/RayTracer/src
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
